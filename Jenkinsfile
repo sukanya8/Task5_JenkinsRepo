@@ -1,10 +1,12 @@
 pipeline{
 agent any
 
-properties([pipelineTriggers([
-githubPush()
-])
-])
+properties([
+    pipelineTriggers([
+      [$class: "GitHubPushTrigger"]
+    ])
+  ])
+
 
 stages{
     
